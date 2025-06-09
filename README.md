@@ -82,3 +82,43 @@ data = {
 response = requests.post(endpoint + "text/analytics/v3.0/sentiment", 
                         headers=headers, json=data)
 print(response.json())
+
+
+2. SDK Azure
+python
+from azure.ai.textanalytics import TextAnalyticsClient
+from azure.core.credentials import AzureKeyCredential
+
+credential = AzureKeyCredential("[SUA-CHAVE]")
+client = TextAnalyticsClient(endpoint="[SEU-ENDPOINT]", credential=credential)
+
+documents = ["Ótimo produto, recomendo!"]
+response = client.analyze_sentiment(documents)
+print(response[0].sentiment)
+Melhores Práticas
+✔️ Pré-processamento: Limpeza de texto (remoção de stopwords)
+✔️ Avaliação contínua: Monitorar acurácia do modelo
+✔️ Rotulagem cuidadosa: Garantir qualidade dos dados de treino
+✔️ Versionamento: Manter diferentes versões do modelo
+
+Limpeza de Recursos
+Para evitar custos indesejados:
+
+No Azure Portal, vá para o grupo de recursos
+
+Selecione o recurso de Language Service
+
+Clique em "Excluir"
+
+Recursos Adicionais
+Documentação Oficial
+
+Exemplos de Código
+
+Fórum de Suporte
+
+text
+
+Este README.md fornece um guia completo para implementação de análise de sentimentos usando o Azure AI Language Studio, desde a configuração inicial até a integração em aplicações.
+New chat
+Message DeepSeek
