@@ -119,6 +119,3 @@ Fórum de Suporte
 
 text
 
-Este README.md fornece um guia completo para implementação de análise de sentimentos usando o Azure AI Language Studio, desde a configuração inicial até a integração em aplicações.
-New chat
-Message DeepSeek
